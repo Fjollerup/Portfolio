@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald:200,300,400,500,600,700&display=swap');
+body {
+    font-family: "Oswald";
+    background: #111;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:active,
+a:visited {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "Oswald";
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ef0d33;
+    font-size: 24px;
+    margin: 0;
+    padding: .5em 0 0 1em;
+    line-height: 40px;
+    position: fixed;
+}
+
+button {
+    outline: none;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* 
+-----------------------------------
+NAVIGATION
+-----------------------------------
+*/
+
+header {
+    position: relative;
+    /* background: #ef0d33; */
+    width: 100%;
+}
+
+header button {
+    display: flex;
+    justify-content: center;
+    width: 56px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+    #hamburger span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 32px;
+        background: #ef0d33;
+    }
+
+    #hamburger span:nth-child(1) {
+        top: 10px;
+    }
+
+    #hamburger span:nth-child(2) {
+        top: 18px;
+    }
+
+    #hamburger span:nth-child(3) {
+        top: 26px;
+    }
+
+/* 
+-----------------------------------
+NAVIGATION - OVERLAY
+-----------------------------------
+*/
+
+.navbar {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #111;
+    opacity: 0;
+    transition: opacity 200ms ease;
+}
+
+#menu {
+    margin: 0 0 0 4em;
+    padding: 80px 0 0 0;
+}
+
+    #menu .menu__list {
+        list-style: none;
+        margin: 0 0 20px 0;
+        padding: 0;
+    }
+
+    #menu .menu__item {
+        padding: 0;
+        margin: 0;
+    }
+
+    #menu .menu__list .menu__link {
+        font-family: "Oswald";
+        font-weight: 400;
+        color: #fff;
+        font-size: 32px;
+        text-transform: uppercase;
+        line-height: 1.2;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #menu .menu__list.menu__list--small .menu__link {
+        font-size: 16px;
+        color: #666;
+        line-height: 1.6;
+        text-transform: none;
+    }
+
+    .navbar--open {
+        opacity: 1;
+    }
+
+    .menu__list--small {
+        opacity: 0;
+    }
+
+    .navbar--open #menu .menu__list {
+        animation: showNav 900ms ease forwards;
+        -webkit-animation: showNav 900ms ease forwards;
+    }
+
+    .navbar--open #menu .menu__list--small {
+        animation: showNav 900ms 200ms ease forwards;
+        -webkit-animation: showNav 900ms 200ms ease forwards;
+    }
+
+/* 
+-----------------------------------
+NAVIGATION - MENU - BREAKPOINT: Tablet
+Menuen forholder sig nu til højre margin
+Rykkes fra øverste-venstre focal point, til øverste-højre.
+-----------------------------------
+*/
+
+@media screen and (min-width: 768px) {
+    #menu {
+        margin: 0 0 0 50%;
+        padding: 10em 0 0 0;
+    }
+
+    #menu .menu__list .menu__link {
+        font-size: 40px;
+    }
+}
+
+/*
+-----------------------------------
+NAVIGATION - MENU - BREAKPOINT: Desktop
+Justering af størrelse til desktop.
+-----------------------------------
+*/
+
+@media screen and (min-width: 1080px) {
+    #menu {
+        margin: 0 0 0 55%;
+        padding: 10em 0 0 0;
+    }
+
+    #menu .menu__list .menu__link {
+        font-size: 60px;
+    }
+
+    #menu .menu__list.menu__list--small .menu__link {
+        font-size: 20px;
+     
+    }
+}
+
+/* 
+-----------------------------------
+NAVIGATION - MENU
+- Den animerede del.
+-----------------------------------
+*/
+
+    .link__layer {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        transform: translate3d(-100%,0,0);
+        animation: anim-out-layer 500ms ease-out;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        pointer-events: none;
+    }
+
+    .link__layer::before {
+        content: attr(data-text);
+        display: block;
+        width: 100%;
+        background: #111;
+        color: #ef0d33;
+        transform: translate3d(100%, 0, 0);
+        animation: anim-out-text 500ms ease-out;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    .menu__link--anim:hover .link__layer {
+        animation: anim-in-layer 500ms ease forwards;
+    }
+
+    .menu__link--anim:hover .link__layer::before {
+        animation: anim-in-text 500ms ease forwards;
+    }
+
+    @keyframes showNav {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, -40px, 0)
+        }
+        100% {
+            opacity: 1;
+            transform: translateZ(0)
+        }
+    }
+
+    @keyframes anim-in-layer {
+        0% {
+            transform: translate3d(-100%, 0, 0)
+        }
+        to {
+            transform: translateZ(0)
+        }
+    }
+    
+    @keyframes anim-out-layer {
+        0% {
+            transform: translateZ(0)
+        }
+        to {
+            transform: translate3d(100%, 0, 0)
+        }
+    }
+    
+    @keyframes anim-in-text {
+        0% {
+            transform: translate3d(100%, 0, 0)
+        }
+        to {
+            transform: translateZ(0)
+        }
+    }
+    
+    @keyframes anim-out-text {
+        0% {
+            transform: translateZ(0)
+        }
+        to {
+            transform: translate3d(-100%, 0, 0)
+        }
+    }
+
+/* 
+-----------------------------------
+NAVIGATION - MENU
+- Til større viewports.
+-----------------------------------
+*/
+
+    /* #menu {
+        position: absolute;
+        top: 200px;
+        right: 200px;
+        margin: 0;
+    }
+    
+        #menu .menu__list {
+            list-style: none;
+        }
+    
+        #menu .menu__item {
+            padding: 0;
+            margin: 0;
+        }
+    
+        #menu .menu__list .menu__link {
+            font-family: "Oswald";
+            font-weight: 400;
+            color: #fff;
+            font-size: 60px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        #menu .menu__list.menu__list--small .menu__link {
+            font-size: 20px;
+            color: #444;
+            line-height: 1.6;
+            text-transform: none;
+        } */
