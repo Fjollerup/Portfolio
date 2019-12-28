@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald:200,300,400,500,600,700&display=swap');
 body {
     font-family: "Oswald";
-    background: #111;
+    /* background: #111; */
     margin: 0;
     padding: 0;
 }
@@ -10,22 +10,33 @@ a,
 a:active,
 a:visited {
     text-decoration: none;
+    color: #111;
 }
 
 h1 {
+    display: block;
     font-family: "Oswald";
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
-    color: #ef0d33;
-    font-size: 24px;
+    color: #fff;
+    font-size: 2.6rem;
+    line-height: 1.2;
     margin: 0;
-    padding: .5em 0 0 1em;
-    line-height: 40px;
-    position: fixed;
+}
+
+p {
+    font-family: "Open Sans";
+    color: #555;
+    margin: 0;
+    padding: 0;
 }
 
 button {
     outline: none;
+}
+
+ul {
+    list-style: none;
 }
 
 .no-scroll {
@@ -39,23 +50,34 @@ NAVIGATION
 */
 
 header {
-    position: relative;
-    /* background: #ef0d33; */
+    position: absolute;
     width: 100%;
+    background: #111;
 }
 
-header button {
-    display: flex;
-    justify-content: center;
+.brand {
+    display: block;
+    position: fixed;
+    font-family: "Oswald";
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ef0d33;
+    font-size: 26px;
+    margin: 0;
+    z-index: 3;
+    padding: .5em .5em .5em 1em;
+}
+
+#hamburger {
     width: 56px;
     height: 40px;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 22px;
     border: 0;
     background: none;
     cursor: pointer;
-    z-index: 3;
+    z-index: 4;
 }
 
     #hamburger span {
@@ -86,23 +108,25 @@ NAVIGATION - OVERLAY
 
 .navbar {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
+    height: 100vh;
     background: #111;
     opacity: 0;
-    transition: opacity 200ms ease;
+    transition: opacity 300ms ease;
 }
 
 #menu {
     margin: 0 0 0 4em;
     padding: 80px 0 0 0;
+    visibility: hidden;
 }
 
     #menu .menu__list {
-        list-style: none;
+        /* list-style: none; */
         margin: 0 0 20px 0;
         padding: 0;
     }
@@ -132,6 +156,10 @@ NAVIGATION - OVERLAY
 
     .navbar--open {
         opacity: 1;
+    }
+
+    .navbar--open #menu {
+        visibility: visible;
     }
 
     .menu__list--small {
@@ -197,18 +225,18 @@ NAVIGATION - MENU
 -----------------------------------
 */
 
-    .link__layer {
-        display: block;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        transform: translate3d(-100%,0,0);
-        animation: anim-out-layer 500ms ease-out;
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        pointer-events: none;
-    }
+.link__layer {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    transform: translate3d(-100%,0,0);
+    animation: anim-out-layer 500ms ease-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    pointer-events: none;
+}
 
     .link__layer::before {
         content: attr(data-text);
@@ -279,41 +307,188 @@ NAVIGATION - MENU
 
 /* 
 -----------------------------------
-NAVIGATION - MENU
-- Til større viewports.
+INTRO SECTION
 -----------------------------------
 */
 
-    /* #menu {
-        position: absolute;
-        top: 200px;
-        right: 200px;
+#cover {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+}
+
+#cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image:  url('../img/intro.jpg');
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    opacity: .05;
+}
+
+.intro {
+    text-align: center;
+}
+
+.intro .intro__content {
+    margin: 0
+}
+
+.intro__sep {
+    display: block;
+    height: 2px;
+    width: 50px;
+    background: #ef0d33;
+    margin: 25px auto;
+}
+
+.intro p {
+    font-family: "Open Sans";
+    max-width: 360px;
+    margin: 0 auto;
+    color: #999;
+}
+
+/* 
+-----------------------------------
+CONTENT SECTION
+-----------------------------------
+*/
+
+.emne__container {
+    max-width: 500px;
+    margin: 0 auto;;
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+    .emne__container h2 {
+        font-size: 32px;
+        font-weight: 500;
         margin: 0;
+        text-transform: uppercase;
     }
-    
-        #menu .menu__list {
-            list-style: none;
+
+    .emne__container .emne__list {
+        margin: 2rem 0 0 0;
+        padding: 0;
+        text-align: center;
+    }
+
+#web {
+    position: relative;
+}
+
+#web::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image:  url('../img/seo.jpg');
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+    opacity: .3;
+    z-index: -1;
+}
+
+    #web .emne__container h2 {
+        color: #111;
+    }
+
+    #web .list__link {
+        color: #111;
+    }
+
+
+#komm {
+    position: relative;
+    background: rgb(0,168,255);
+    background: linear-gradient(90deg, rgba(0,168,255,1) 0%, rgba(0,104,255,1) 100%);
+    z-index: 2;
+}
+
+    #komm::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 18%;
+        background-image: url('../img/kommunikation.png');
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        height: 200px;
+        width: 300px;
+        opacity: .3;
+        transition: left 300ms;
+    }
+
+    @media screen and (min-width: 500px) {
+        #komm::after {
+            left: 60%;
         }
-    
-        #menu .menu__item {
-            padding: 0;
-            margin: 0;
-        }
-    
-        #menu .menu__list .menu__link {
-            font-family: "Oswald";
-            font-weight: 400;
-            color: #fff;
-            font-size: 60px;
-            text-transform: uppercase;
-            line-height: 1.2;
-            position: relative;
-            overflow: hidden;
-        }
-    
-        #menu .menu__list.menu__list--small .menu__link {
-            font-size: 20px;
-            color: #444;
-            line-height: 1.6;
-            text-transform: none;
-        } */
+    }
+
+    #komm .emne__container .emne__list {
+        position: relative;
+        z-index: 2;
+    }
+
+    #komm h2 {
+        color: #fff;
+    }
+
+    #komm p,
+    #komm .list__link {
+        color: #eee;
+    }
+
+#design {
+    position: relative;
+}
+
+    #design::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        background-image:  url('../img/design.png');
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-size: auto 100%;
+        opacity: .3;
+        z-index: -1;
+    }
+
+    #design p {
+        color: #111;
+    }
+
+#brugervenlighed {
+    background: rgb(255,184,84);
+    background: linear-gradient(45deg, rgba(255,184,84,1) 0%, rgba(255,128,0,1) 100%);
+}
+
+#brugervenlighed h2 {
+    color: #fff;
+}
+
+    #brugervenlighed p,
+    #brugervenlighed .list__link {
+        color: #eee;
+    }

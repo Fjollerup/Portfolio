@@ -11,87 +11,202 @@
 </head>
 
 <body>
+    
+<header id="navbar__header">
+            <span class="brand">Portfolio</span>
+            <button id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+<!-- Start på overlay-menu -->
+        <div id="navbar" class="navbar">
+            <nav id="menu">
+                <ul id="menu__main" class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link menu__link--anim" href="">
+                            <span class="link__layer" data-text="Webudvikling"></span>
+                            Webudvikling
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link  menu__link--anim" href="">
+                            <span class="link__layer" data-text="Brugervenlighed"></span>
+                            Brugervenlighed
+                        </a>
+                    </li>
+                    <li>
+                        <a class="menu__link menu__link--anim" href="">
+                            <span class="link__layer" data-text="Kommunikation"></span>
+                            Kommunikation
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link  menu__link--anim" href="">
+                            <span class="link__layer" data-text="Design"></span>
+                            Design
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link  menu__link--anim">
+                            <span class="link__layer" data-text="Projekter"></span>
+                            Projekter
+                        </a>
+                    </li>
+                </ul>
 
-    <header id="navbar__header">
-        <h1>Læringsportfolio</h1>
-        <button id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </header>
-    <!-- Start på overlay-menu -->
-    <div id="navbar" class="navbar">
-        <nav id="menu">
-            <ul id="menu__main" class="menu__list">
-                <li class="menu__item">
-                    <a class="menu__link menu__link--anim" href="">
-                        <span class="link__layer" data-text="Webudvikling"></span>
-                        Webudvikling
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link  menu__link--anim" href="">
-                        <span class="link__layer" data-text="Brugervenlighed"></span>
-                        Brugervenlighed
-                    </a>
-                </li>
-                <li>
-                    <a class="menu__link menu__link--anim" href="">
-                        <span class="link__layer" data-text="Kommunikation"></span>
-                        Kommunikation
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a class="menu__link  menu__link--anim" href="">
-                        <span class="link__layer" data-text="Design"></span>
-                        Design
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a href="" class="menu__link  menu__link--anim">
-                        <span class="link__layer" data-text="Projekter"></span>
-                        Projekter
-                    </a>
-                </li>
-            </ul>
-
-            <!-- Start på lille menu del -->
-            <ul id="menu__small" class="menu__list menu__list--small">
-                <li>
-                    <a href="" class="menu__link">
-                    <span></span>
-                    Webbog - Formularer
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="menu__link">
-                    <span></span>
-                    Webbog Index
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="menu__link">
-                    <span></span>
-                    Design Thinking
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="menu__link">
-                    <span></span>
-                    Onepage
-                    </a>
-                </li>
-                <li>
-                    <a href="" class="menu__link">
-                    <span></span>
-                    Om siden
-                    </a>
-                </li>
-            </ul>
-            
-        </nav>
+<!-- Start på lille menu del -->
+                <ul id="menu__small" class="menu__list menu__list--small">
+                    <li>
+                        <a href="" class="menu__link">
+                        <span></span>
+                        Webbog - Formularer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="menu__link">
+                        <span></span>
+                        Webbog Index
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="menu__link">
+                        <span></span>
+                        Design Thinking
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="menu__link">
+                        <span></span>
+                        Onepage
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="menu__link">
+                        <span></span>
+                        Om siden
+                        </a>
+                    </li>
+                </ul>        
+            </nav>
+        </div>
+<!-- INTRO START -->
+    <div id="cover">
+        <section class="intro">
+            <h1 class="intro__heading">
+                <span>Jesper's</span>
+                <span>Portfolio</span>
+            </h1>
+            <span class="intro__sep"></span>
+            <p class="intro__text">
+                Dette website viser alt, hvad jeg har lært på min 1. semester af multimedieudesigner uddannelsen.
+                Her findes også en samling af de projekter jeg har deltaget i på semestret.
+            </p>
+        </section>
     </div>
+
+<!-- CONTENT START -->
+    <section class="content">
+    
+        <section id="web">
+            <div class="emne__container">
+                <h2>Webudvikling</h2>
+                <p>Denne sektion indeholder grundlæggende teori, metoder og redskaber, der er nødvendige for at kunne producerer et website.</p>
+                <ul class="emne__list">
+                    <li class="list__item">
+                        <a class="list__link" href="">HTML & SEO</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">CSS</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Internettets historie & perioder</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Serbegrebet & serverside scripting</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="komm">
+            <div class="emne__container">
+                <h2>Kommunikation</h2>
+                <p>Denne sektion indeholder grundlæggende teori, metoder og redskaber, der er nødvendige for at kunne producerer et website.</p>
+                <ul class="emne__list">
+                    <li class="list__item">
+                        <a class="list__link" href="">Grundlæggende</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Præsentationsteknik</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Kvalitativ og Kvantitativ impiri</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Tekstproduktion</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Business Canvas Model (BMC)</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="design">
+            <div class="emne__container">
+                <h2>Design</h2>
+                <p>Denne sektion indeholder det grundlæggende, for at forbedre bruger-oplevelsen.</p>
+                <ul class="emne__list">
+                    <li class="list__item">
+                        <a class="list__link" href="">Fotografering</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Illustrator</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Photoshop</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Farver</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Typografi</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Gestaltlovene</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="brugervenlighed">
+            <div class="emne__container">
+                <h2>Brugervenlighed</h2>
+                <p>Denne sektion indeholder det grundlæggende, for at forbedre bruger-oplevelsen.</p>
+                <ul class="emne__list">
+                    <li class="list__item">
+                        <a class="list__link" href="">Informationsarkitektur</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Responsivt Design</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="">Usability</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+
+        
+        <section id="projekter">
+
+        </section>
+
+    </section>
+
     
     
     <script type="text/javascript" src="js/js.js"></script>
