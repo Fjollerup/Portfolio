@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald:200,300,400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
+
+html { scroll-behavior: smooth; }
+
 body {
     font-family: "Oswald";
-    /* background: #111; */
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 a,
@@ -13,8 +17,22 @@ a:visited {
     color: #111;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h4 {
+    margin: 1rem 0 0 0;
+}
+
+h5 {
+    font-size: 1rem;
+    margin: 0.5rem 0 0 0;
+    font-weight: 400;
+}
+
 h1 {
-    display: block;
     font-family: "Oswald";
     font-weight: 500;
     text-transform: uppercase;
@@ -26,7 +44,7 @@ h1 {
 
 p {
     font-family: "Open Sans";
-    color: #555;
+    color: #111;
     margin: 0;
     padding: 0;
 }
@@ -43,40 +61,69 @@ ul {
     overflow: hidden;
 }
 
+.seperator {
+    display: block;
+    height: 2px;
+    width: 50px;
+    background: #ef0d33;
+}
+
+img {
+    width: 100%;
+}
+
+.img__perspektiv {
+    max-width: 300px;
+}
+
 /* 
 -----------------------------------
 NAVIGATION
 -----------------------------------
 */
 
-header {
-    position: absolute;
+.navbar__header {
+    position: fixed;
+    display: block;
     width: 100%;
-    background: #111;
+    height: 70px;
+    padding: 0;
+    background-color: rgba(17,17,17, .9);
+    z-index: 4;
+    transition: 
+    background-color 500ms ease-out,
+    transform 300ms ease-out;
+}
+
+.navbar__header.navbar__header--top {
+    background-color: transparent;
 }
 
 .brand {
-    display: block;
-    position: fixed;
     font-family: "Oswald";
     font-weight: 400;
     text-transform: uppercase;
     color: #ef0d33;
-    font-size: 26px;
+    font-size: 20px;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
     margin: 0;
-    z-index: 3;
-    padding: .5em .5em .5em 1em;
+    z-index: 2;
 }
 
 #hamburger {
-    width: 56px;
-    height: 40px;
-    position: fixed;
-    top: 20px;
-    right: 22px;
+    width: 32px;
+    height: 19px;
+    background: #ef0d33;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
     border: 0;
+    padding: 0;
     background: none;
     cursor: pointer;
+    overflow: hidden;
     z-index: 4;
 }
 
@@ -89,16 +136,35 @@ header {
     }
 
     #hamburger span:nth-child(1) {
-        top: 10px;
+        top: 0;
     }
 
     #hamburger span:nth-child(2) {
-        top: 18px;
+        top: 8px;
     }
 
     #hamburger span:nth-child(3) {
-        top: 26px;
+        top: 16px;
     }
+
+.scroll-down .navbar__header {
+    transform: translate3d(0, -100%, 0);
+}
+.scroll-up .navbar__header {
+    transform: none;
+}
+
+@media screen and (min-width: 768px) {
+    .brand {
+        font-size: 30px;
+        top: .7rem;
+        left: 3rem;
+    }
+
+    #hamburger {
+        right: 4em;
+    }
+}
 
 /* 
 -----------------------------------
@@ -116,7 +182,10 @@ NAVIGATION - OVERLAY
     height: 100vh;
     background: #111;
     opacity: 0;
-    transition: opacity 300ms ease;
+    transition: 
+    opacity 300ms ease,
+    visibility 300ms ease;
+    visibility: hidden;
 }
 
 #menu {
@@ -126,7 +195,6 @@ NAVIGATION - OVERLAY
 }
 
     #menu .menu__list {
-        /* list-style: none; */
         margin: 0 0 20px 0;
         padding: 0;
     }
@@ -156,6 +224,7 @@ NAVIGATION - OVERLAY
 
     .navbar--open {
         opacity: 1;
+        visibility: visible !important;
     }
 
     .navbar--open #menu {
@@ -307,7 +376,73 @@ NAVIGATION - MENU
 
 /* 
 -----------------------------------
-INTRO SECTION
+FOOTER SECTION
+-----------------------------------
+*/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #111;
+    color: #fff;
+    font-size: .8rem;
+    padding: 2rem 0;
+    line-height: 2.5;
+    margin: 3rem 0 0 0;
+}
+
+    .footer h3 {
+        font-size: 2.5rem;
+        display: inline-block;
+        text-transform: uppercase;
+        margin: auto 0;
+        padding: 1rem 2rem 1rem 0;
+        position: relative;
+    }
+
+    .footer h3::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        background: #ef0d33;
+        height: 100%;
+        width: 3px;
+    }
+
+    .footer div {
+        display: inline-block;
+        margin: auto 0;
+    }
+
+    .footer span:nth-child(2), footer span:nth-child(3) {
+        display: block;
+    }
+
+@media screen and (min-width: 768px) {
+    footer h3 {
+        font-size: 3rem;
+        padding: 0 2rem 0 0;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    footer {
+        font-size: 1rem;
+    }
+    
+    footer h3 {
+        font-size: 4rem;
+        padding: 0 2rem 0 0;
+    }
+}
+
+/* 
+-----------------------------------
+FORSIDE
+- Intro section
 -----------------------------------
 */
 
@@ -321,59 +456,93 @@ INTRO SECTION
     background: #111;
 }
 
-#cover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-image:  url('../img/intro.jpg');
-    background-position-x: 50%;
-    background-position-y: 50%;
-    background-size: cover;
-    opacity: .05;
-}
+    #cover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-image:  url('../img/cover.png');
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-size: cover;
+        opacity: .1;
+    }
 
-.intro {
+.forside .intro {
     text-align: center;
+    z-index: 1;
 }
 
-.intro .intro__content {
-    margin: 0
+    .forside .intro__heading {
+        padding: 0;
+    }
+
+    .forside .intro .intro__content {
+        margin: 0
+    }
+
+    .forside .intro .seperator {
+        margin: 2rem auto;
+    }
+
+    .forside .intro p {
+        font-family: "Open Sans";
+        max-width: 340px;
+        margin: 0 auto;
+        padding: 0;
+        color: #999;
+    }
+
+@media screen and (min-width: 768px) {
+    .forside .intro {
+        margin: 0 0 0 -200px;
+        text-align: left;
+        max-width: 450px;
+    }
+
+    .forside .intro h1 {
+        font-size: 3.82em;
+    }
+
+    .forside .intro p {
+        margin: 0;
+    }
+
+    .forside .intro .seperator {
+        margin: 25px 0;
+    }
 }
 
-.intro__sep {
-    display: block;
-    height: 2px;
-    width: 50px;
-    background: #ef0d33;
-    margin: 25px auto;
-}
+@media screen and (min-width: 1280px) {
+    .forside .intro {
+        margin: 0 0 0 -400px;
+    }
 
-.intro p {
-    font-family: "Open Sans";
-    max-width: 360px;
-    margin: 0 auto;
-    color: #999;
+    .forside .intro .intro__heading {
+        font-size: 5.32em;
+        line-height: 1.1;
+    }
 }
 
 /* 
 -----------------------------------
-CONTENT SECTION
+FORSIDE
+- Content
 -----------------------------------
 */
 
 .emne__container {
     max-width: 500px;
     margin: 0 auto;;
-    padding: 4rem 1.5rem;
+    padding: 6rem 1.5rem;
     text-align: center;
 }
 
     .emne__container h2 {
-        font-size: 32px;
+        font-size: 40px;
         font-weight: 500;
         margin: 0;
         text-transform: uppercase;
@@ -385,34 +554,68 @@ CONTENT SECTION
         text-align: center;
     }
 
-#web {
-    position: relative;
+    .emne__container .emne__list .list__link {
+        font-size: 18px;
+    }
+
+@media screen and (min-width: 768px) {
+    .emne__container {
+        text-align: left;
+        padding: 8rem 3rem;
+    }
+
+    .emne__container .emne__list {
+        text-align: left;
+    }
+
+    .emne__container h2 {
+        font-size: 56px;
+        margin: 0 0 20px 0;
+    }
 }
 
-#web::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-image:  url('../img/seo.jpg');
-    background-position-x: 50%;
-    background-position-y: 50%;
-    background-size: cover;
-    opacity: .3;
-    z-index: -1;
+@media screen and (min-width: 1280px) {
+    .emne__container {
+        max-width: 700px;
+        padding: 8rem 3rem;
+    }
+
+    .emne__container .emne__list {
+        text-align: left;
+    }
+
+    .emne__container h2 {
+        font-size: 72px;
+    }
 }
+
+#web {
+    position: relative;
+    box-shadow: 
+    inset 0 -6px 8px -8px rgba(0,0,0,1),
+    inset 0 6px 8px -8px rgba(0,0,0,1);
+}
+
+    #web::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-image:  url('../img/html/seo.png');
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-size: cover;
+        opacity: .3;
+        z-index: -1;
+    }
 
     #web .emne__container h2 {
         color: #111;
     }
-
-    #web .list__link {
-        color: #111;
-    }
-
 
 #komm {
     position: relative;
@@ -457,6 +660,9 @@ CONTENT SECTION
 
 #design {
     position: relative;
+    box-shadow: 
+    inset 0 -6px 8px -8px rgba(0,0,0,1),
+    inset 0 6px 8px -8px rgba(0,0,0,1);
 }
 
     #design::after {
@@ -466,29 +672,780 @@ CONTENT SECTION
         right: 0;
         bottom: 0;
         left: 0;
-        height: 100%;
-        background-image:  url('../img/design.png');
+        width: 100%;
+        background-image: url('../img/design.png');
+        background-repeat: no-repeat;
         background-position-x: 50%;
         background-position-y: 50%;
-        background-size: auto 100%;
+        background-size: cover;
         opacity: .3;
         z-index: -1;
     }
 
-    #design p {
-        color: #111;
-    }
-
-#brugervenlighed {
+#ui {
     background: rgb(255,184,84);
     background: linear-gradient(45deg, rgba(255,184,84,1) 0%, rgba(255,128,0,1) 100%);
 }
 
-#brugervenlighed h2 {
+    #ui h2, #ui p {
+        color: #fff;
+    }
+
+#projekter {
+    position: relative;
+    box-shadow: 
+    inset 0 -6px 8px -8px rgba(0,0,0,1),
+    inset 0 6px 8px -8px rgba(0,0,0,1);
+}
+
+    #projekter::after {
+        content: '';
+            background-image: url('../img/projekt.png');
+            opacity: .5;
+    }
+
+/* 
+---------------------------------------------------------------------------
+
+COVER SEKTIONER
+- Kategorier og emner
+
+---------------------------------------------------------------------------
+*/
+
+
+/* 
+-----------------------------------
+Cover sektion: Kategori-sider
+----------------------------------- 
+*/
+
+.emne__cover {
+        z-index: 1;
+    }
+    
+    #cover.cover__web::before {
+        background-image:  url('../img/cover.png');
+    }
+
+    #cover.cover__design::before {
+        background-image:  url('../img/design.png');
+    }
+
+    #cover.cover__komm::before {
+        background-image:  url('../img/cover.png');
+    }
+
+    #cover.cover__ui::before {
+        background-image:  url('../img/uidesign.png');
+}
+
+    #cover.cover__projekter::before,
+    #cover.cover__projekt__webbog::before,
+    #cover.cover__projekt__dt::before,
+    #cover.cover__projekt__onepage::before {
+        background-image:  url('../img/projekt.png');
+    }
+
+/* 
+-----------------------------------
+Cover sektion: Emne-sider
+-----------------------------------
+*/
+
+#cover.cover__html {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    z-index: 1;
+}
+
+    #cover.cover__html::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-image:  url('../img/html/seo.png');
+        background-position-x: 50%;
+        background-position-y: 70%;
+        background-size: cover;
+        opacity: .05;
+        z-index: -1;
+    }
+
+    /* .cover__html .intro {
+        margin: 50px 0 0 0;
+    } */
+
+#cover.cover__css {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111;
+}
+
+    #cover.cover__css::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        background-image:  url('../img/css/css.png');
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-size: cover;
+        opacity: .1;
+        z-index: -1;
+    }
+
+/* 
+-----------------------------------
+COVER SEKTIONER
+- Intro-block
+-----------------------------------
+*/
+
+.emne__cover .intro {
+        display: flex;
+        margin: 0;
+        flex-flow: column wrap;
+        justify-content: center;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .emne__cover .intro .intro__heading {
+        line-height: 1;
+    }
+
+    .emne__cover .intro .intro__heading span {
+        display: block;
+    }
+
+    .emne__cover .intro__text {
+        color: #999;
+        margin: 0 0 2rem 0;
+    }
+
+    .emne__cover .intro--left {
+        max-width: 310px;
+        margin: 0 auto;
+    }
+
+    .emne__cover .intro--left .seperator {
+        width: 3rem;
+        margin: 2rem auto;
+    }
+
+    .emne__cover .intro--right {
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .emne__cover .intro__list  {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .emne__cover.cover__bmc .intro__list {
+        columns: 2;
+    }
+
+.list__item .list__link {
+    position: relative;
+    transition: color 400ms ease;
+}
+
+.intro .list__item .list__link {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#ui .list__item .list__link,
+#komm .list__item .list__link {
     color: #fff;
 }
 
-    #brugervenlighed p,
-    #brugervenlighed .list__link {
-        color: #eee;
+.list__item .list__link:hover,
+#ui .list__item .list__link:hover,
+#komm .list__item .list__link:hover {
+    color: #ef0d33;
+}
+
+.section__text .text__link {
+    color: #ef0d33;
+    transition: all 400ms ease;
+}
+
+.text__link:hover {
+    color: #111;
+    text-decoration: underline;
+}
+
+/* 
+-----------------------------------
+COVER SEKTIONER
+- Breakpoint
+-----------------------------------
+*/
+
+@media screen and (min-width: 768px) {
+    .emne__cover .intro {
+        text-align: left;
+        flex-flow: row wrap;
+    }
+
+    .emne__cover .intro--left {
+        padding: 0;
+        margin: 0;
+    }
+
+    .emne__cover.cover__web .intro--left {
+        max-width: 20.7rem;
+    }
+
+    .emne__cover .intro__heading {
+        font-size: 3.5rem;
+    }
+
+    .emne__cover .intro--right {
+        margin: 0 0 0 5em;
+        padding: 0;
+    }
+
+    .emne__cover .intro--left .seperator {
+        width: 100%;
+    }
+
+    .emne__cover .intro--right .intro__list .list__item {
+        padding: 0 0 12px 0;
+    }
+
+    /*
+    KATEGORIER
+    */
+    .emne__cover.cover__komm .intro--left {
+        max-width: 23.3rem;
+    }
+
+    .emne__cover.cover__design .intro--left {
+        max-width: 17.5rem;
+    }
+
+    .emne__cover.cover__projekter .intro--left {
+        max-width: 20rem;
+    }
+
+    .emne__cover.cover__bmc .intro--left {
+        max-width: 19.5rem;
+    }
+
+    /* 
+    EMNER
+    */
+    .emne__cover.cover__html .intro--left {
+        max-width: 21rem;
+    }
+    
+    .emne__cover.cover__css .intro--left {
+        max-width: 18.8rem;
+    }
+
+    .emne__cover.cover__historie .intro--left {
+        max-width: 19rem;
+    }
+
+    .emne__cover.cover__server .intro--left {
+        max-width: 23.5rem;
+    }
+
+    .emne__cover.cover__version .intro--left {
+        max-width: 25.3rem;
+    }
+
+    .emne__cover.cover__ia .intro--left {
+        max-width: 21.6rem;
+    }
+
+    .emne__cover.cover__responsive .intro--left {
+        max-width: 18.5rem;
+    }
+    
+    .emne__cover.cover__usability .intro--left {
+        max-width: 18rem;
+    }
+
+    .emne__cover.cover__grundlaeggende .intro--left {
+        max-width: 24.5rem;
+    }
+
+    .emne__cover.cover__presentation .intro--left {
+        max-width: 20.8rem;
+    }
+
+    .emne__cover.cover__impiri .intro--left {
+        max-width: 18.5rem;
+    }
+
+    .emne__cover.cover__produktion .intro--left {
+        max-width: 18rem;
+    }
+
+    .emne__cover.cover__bmc .intro__list {
+        columns: 1;
+    }
+
+    .emne__cover.cover__fotografering .intro--left {
+        max-width: 22.3rem;
+    }
+
+    .emne__cover.cover__illustrator .intro--left {
+        max-width: 19.5rem;
+    }
+
+    .emne__cover.cover__photoshop .intro--left {
+        max-width: 17rem;
+    }
+
+    .emne__cover.cover__farver .intro--left {
+        max-width: 17rem;
+    }
+
+    .emne__cover.cover__typografi .intro--left {
+        max-width: 15.1rem;
+    }
+
+    .emne__cover.cover__gestaltlovene .intro--left {
+        max-width: 21.5rem;
+    }
+
+    .emne__cover.cover__designthinking .intro--left {
+        max-width: 17.5rem;
+    }
+
+    .emne__cover.cover__projekt--dt .intro--left {
+        max-width: 16.5rem;
+    }
+
+    .emne__cover.cover__projekt__webbog .intro--left {
+        max-width: 19rem;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .emne__cover .intro {
+        max-width: none;
+    }
+
+    .emne__cover .intro .intro__heading {
+        font-size: 5rem;
+    }
+
+    .emne__cover .intro-right {
+        margin: 0 0 0 10rem;
+    }
+
+    /* 
+    -----------------------------------
+    COVER SEKTIONER
+    - KATEGORIER
+    - Justering af bredde på .intro--left så det ser pænt ud
+    grundet store skrift størrelse og længde på overskrifterne
+    Eksempel: Design vs. Kommunikation
+    -----------------------------------
+    */
+    .emne__cover.cover__web .intro--left {
+        max-width: 29.5rem;
+    }
+
+    .emne__cover.cover__ui .intro--left,
+    .emne__cover.cover__design .intro--left {
+        max-width: 24rem;
+    }
+
+    .emne__cover.cover__komm .intro--left {
+        max-width: 33.2rem;
+    }
+
+    .emne__cover.cover__projekter .intro--left {
+        max-width: 21.8rem;
+    }
+    /* 
+    -----------------------------------
+    COVER SEKTIONER
+    - EMNER
+    - Samme grund som ved kategorier.
+    -----------------------------------
+    */
+    
+    .emne__cover.cover__html .intro--left {
+        max-width: 23.4rem;
+    }
+
+    .emne__cover.cover__css .intro--left {
+        max-width: 26.8rem;
+    }
+
+    .emne__cover.cover__historie .intro--left {
+        max-width: 27.3rem;
+    }
+
+    .emne__cover.cover__server .intro--left {
+        max-width: 33.6rem;
+    }
+
+    .emne__cover.cover__version .intro--left {
+        max-width: 36rem;
+    }
+
+    .emne__cover.cover__ia .intro--left {
+        max-width: 31rem;
+    }
+
+    .emne__cover.cover__responsive .intro--left {
+        max-width: 24.3rem;
+    }
+
+    .emne__cover.cover__usability .intro--left {
+        max-width: 20.5rem;
+    }
+
+    .emne__cover.cover__grundlaeggende .intro--left {
+        max-width: 35rem;
+    }
+
+    .emne__cover.cover__presentation .intro--left {
+        max-width: 29.6rem;
+    }
+
+    .emne__cover.cover__impiri .intro--left {
+        max-width: 26rem;
+    }
+
+    .emne__cover.cover__produktion .intro--left {
+        max-width: 25.6rem;
+    }
+
+    .emne__cover.cover__bmc .intro--left {
+        max-width: 19.5rem;
+    }
+
+    .emne__cover.cover__fotografering .intro--left {
+        max-width: 32rem;
+    }
+
+    .emne__cover.cover__illustrator .intro--left {
+        max-width: 26.3rem;
+    }
+
+    .emne__cover.cover__photoshop .intro--left {
+        max-width: 24.4rem;
+    }
+
+    .emne__cover.cover__typografi .intro--left {
+        max-width: 21.5rem;
+    }
+
+    .emne__cover.cover__gestaltlovene .intro--left {
+        max-width: 30.7rem;
+    }
+
+    .emne__cover.cover__designthinking .intro--left {
+        max-width: 18.75rem;
+    }
+
+    .emne__cover.cover__projekt--dt .intro--left {
+        max-width: 18.8rem;
+    }
+
+    .emne__cover.cover__projekt__webbog .intro--left {
+        max-width: 22.8rem;
+    }
+}
+
+
+
+/* 
+-----------------------------------
+EMNE SIDER
+- code-sample
+-----------------------------------
+*/
+
+.section__code {
+    margin: 2rem 0;
+}
+
+pre.linenumbers {
+    counter-reset: linenumber;
+    padding: 1rem 0 1rem 4rem;
+    height: 100%;
+    border-left: 5px solid #ef0d33;
+    background: #eee;
+    overflow: auto;
+}
+
+pre.linenumbers > code {
+    position: relative;
+    white-space: wrap;
+    line-height: 1.5;
+}
+
+.linenumbers--rows > span {
+    counter-increment: linenumber;
+}
+
+.linenumbers--rows > span:before {
+    content: counter(linenumber);
+    position: absolute;
+    width: 2rem;
+    color: #999;
+    display: block;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    left: -3rem;
+}
+
+.code__highlight {
+    color: #ef0d33;
+}
+
+.code__comment {
+    color: #999;
+}
+
+.attr__selector {
+    color: rgb(126, 184, 103);
+}
+
+.attr__value {
+    color: #3e6ce9;
+}
+
+.property, .html__tag {
+    color: #c2233e;
+}
+
+#syntaks {
+    position: relative;
+}
+
+/* 
+-----------------------------------
+EMNE SIDE: CSS
+- Box Model
+-----------------------------------
+*/
+
+.boxmodel {
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+}
+
+.boxmodel h3 {
+    font-weight: 400;
+}
+
+.boxmodel.boxmodel__margin {
+    margin: 2rem 0;
+    background: rgb(255, 199, 46);
+}
+
+.boxmodel.boxmodel__border {
+    background: rgb(255, 218, 115);
+}
+
+.boxmodel.boxmodel__padding {
+    background: rgb(132, 255, 138);
+}
+
+.boxmodel.boxmodel__content {
+    background: rgb(255, 255, 255);
+    padding: 1rem 2rem;
+}
+
+/* 
+-----------------------------------
+EMNE SIDER
+- content
+-----------------------------------
+*/
+
+.emne__content {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+    .emne__content .section {
+        padding: 3rem 3rem 0 3rem;
+    }
+
+.section .section__header h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+    .section .section__item h4 {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .section__img {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .section__img img {
+        max-width: 300px;
+        padding: 1rem 1rem 2rem 1rem;
+    }
+
+    #shapebuilder .section__img img,
+    #undervisning .section__img img {
+        max-width: 140px;
+    }
+
+    #selvstudie .section__img img {
+        max-width: 100%;
+    }
+
+    .section .section__item .section__text {
+        margin: 0 0 1rem 0;
+    }
+
+    .section__text.section__text--serif {
+        font-family: "Source Serif Pro";
+    }
+
+    .section__list {
+        padding: 0 2.85rem;
+    }
+
+    .section__list .list__item {
+        position: relative;
+        font-weight: 300;
+    }
+
+    .section__list .list__item.list__item--indent {
+        padding: 0 0 0 2rem;
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .section__list .list__item.list__item--indent::before {
+        content: none;
+    }
+
+    .section__list .list__item::before {
+        content: '-';
+        display: block;
+        position: absolute;
+        top: -1rem;
+        left: -1rem;
+        font-size: 2rem;
+        color: #ef0d33;
+    }
+
+    #perioder .section__item .perioder__list {
+        padding: 0;
+        font-family: "Open Sans";
+        font-size: .9rem;
+    }
+    
+
+    .section__item .section__kilde {
+        font-size: .9rem;
+        margin: 0 0 1rem 0;
+        padding: 0;
+    }
+
+    .section__item .section__quote {
+        font-size: .9rem;
+        padding: 1rem;
+    }
+
+    .section__item .section__quote p {
+        font-family: "Oswald";
+        font-style: italic;
+    }
+
+    .section__item .section__quote footer {
+        font-family: "Open Sans";
+        text-align: right;
+        font-size: .85rem;
+        font-style: italic;
+    }
+
+    .section__kilde .kilde__link {
+        font-size: .9rem;
+        font-style: italic;
+        transition: all 400ms ease;
+        color: rgb(124, 124, 124);
+    }
+
+    .section__kilde .kilde__link:hover {
+        color: #ef0d33;
+        font-size: .95rem;
+    }
+
+    .section__kilde .kilde__link::before {
+        content: '- '
+    }
+
+#webbog .section__img img {
+    max-width: 124px;
+    padding: 1rem;
+}
+
+
+    @media screen and (min-width: 768px) {
+        .emne__content {
+            max-width: 750px;
+        }
+
+        .section__img img {
+            max-width: 625px;
+        }
+
+        #webbog .section__img img {
+            max-width: 250px;
+            padding: 1rem;
+        }
+
+        #onepageprojekt .section__img img,
+        #produktion .section__img img,
+        #farvekombination .section__img img {
+            max-width: 290px;
+        }
+
+        #produktion .section__img:nth-of-type(3) img {
+            max-width: 625px;
+        }
+
+        #shapebuilder .section__img img,
+        #undervisning .section__img img {
+            max-width: 200px;
+        }
+
+        .gestaltlovene .section__img img {
+            max-width: 400px;
+        }
+    }
+
+    .section__video {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 0;
     }
