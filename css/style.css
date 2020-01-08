@@ -1066,6 +1066,10 @@ COVER SEKTIONER
         max-width: 19rem;
     }
 
+    .emne__cover.cover__projekt__onepage .intro--left {
+        max-width: 17.1rem;
+    }
+
     .emne__cover.cover__refleksioner .intro--left {
         max-width: 20rem;
     }
@@ -1203,6 +1207,10 @@ COVER SEKTIONER
 
     .emne__cover.cover__projekt__webbog .intro--left {
         max-width: 22.8rem;
+    }
+
+    .emne__cover.cover__projekt__onepage .intro--left {
+        max-width: 17.8rem;
     }
 
     .emne__cover.cover__refleksioner .intro--left {
