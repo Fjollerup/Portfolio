@@ -396,7 +396,6 @@ FOOTER SECTION
     font-size: .8rem;
     padding: 2rem 0;
     line-height: 2.5;
-    margin: 3rem 0 0 0;
     text-transform: uppercase;
 }
 
@@ -1345,7 +1344,7 @@ EMNE SIDER
 }
 
     .emne__content .section {
-        padding: 3rem 3rem 0 3rem;
+        padding: 2rem 3rem 2rem 3rem;
     }
 
 .section .section__header h3 {
