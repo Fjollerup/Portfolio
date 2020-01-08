@@ -68,7 +68,7 @@
                 </p>
             </div>
         </section>
-
+<!-- FIGURE START -->
         <section class="section" id="figure">
             <div class="section__item">
                 <header class="section__header">
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </section>
-
+<!-- SIMILARITY START -->
         <section class="section" id="similarity">
             <div class="section__item">
                 <header class="section__header">
@@ -113,7 +113,7 @@
                 </p>
             </div>
         </section>
-
+<!-- PROXIMITY START -->
         <section class="section" id="proximity">
             <div class="section__item">
                 <header class="section__header">
@@ -133,7 +133,7 @@
                 </p>
             </div>
         </section>
-
+<!-- CONTINUITY START -->
         <section class="section" id="continuity">
             <div class="section__item">
                 <header class="section__header">
@@ -152,7 +152,7 @@
                 </div>
             </div>
         </section>
-
+<!-- CLOSURE START -->
         <section class="section" id="closure">
             <div class="section__item">
                 <header class="section__header">
@@ -171,7 +171,7 @@
                 </p>
             </div>
         </section>
-
+<!-- FOCALPOINT START -->
         <section class="section" id="focalpoint">
             <div class="section__item">
                 <header class="section__header">

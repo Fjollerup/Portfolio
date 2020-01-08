@@ -79,7 +79,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- FARVESYMBOLIK START -->
         <section class="section" id="farvesymbolik">
             <div class="section__item">
                 <header class="section__header">
@@ -107,7 +107,7 @@
                 </div>
             </div>
         </section>
-
+<!-- FARVESYSTEMER START -->
         <section class="section" id="farvesystemer">
             <div class="section__item">
                 <header class="section__header">
@@ -144,7 +144,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- FARVEKOMBINATION START -->
         <section class="section" id="farvekombination">
             <div class="section__item">
                 <header class="section__header">
@@ -208,7 +208,7 @@
                 <li><a class="kilde__link" href="">Carsten Bogner, "farvelaere.pdf</a></li>
             </ul>
         </section>
-
+<!-- WEBDESIGN START -->
         <section class="section" id="webdesign">
             <div class="section__item">
                 <header class="section__header">

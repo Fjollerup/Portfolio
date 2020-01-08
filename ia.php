@@ -80,7 +80,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- SEARCH START -->
         <section class="section" id="search">
             <div class="section__item">
                 <header class="section__header">
@@ -108,7 +108,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- ORGANISERING START -->
         <section class="section" id="organisering">
             <div class="section__item">
                 <header class="section__header">

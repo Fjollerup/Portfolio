@@ -60,7 +60,7 @@
                 </p>
             </div>
         </section>
-
+<!-- TYPEFACE START -->
         <section class="section" id="typeface">
             <div class="section__item">
                 <header class="section__header">
@@ -82,7 +82,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- ANATOMI START -->
         <section class="section" id="anatomi">
             <div class="section__item">
                 <header class="section__header">
@@ -120,7 +120,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- FONT START -->
         <section class="section" id="font">
             <div class="section__item">
                 <header class="section__header">

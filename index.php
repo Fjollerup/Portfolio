@@ -31,7 +31,7 @@
 
 <!-- CONTENT START -->
     <section class="content">
-    
+        <!-- WEBUDVIKLING -->
         <section id="web">
             <div class="emne__container">
                 <h2>Webudvikling</h2>
@@ -56,6 +56,7 @@
             </div>
         </section>
 
+        <!-- KOMMUNIKATION -->
         <section id="komm">
             <div class="emne__container">
                 <h2>Kommunikation</h2>
@@ -80,6 +81,7 @@
             </div>
         </section>
 
+        <!-- DESIGN -->
         <section id="design">
             <div class="emne__container">
                 <h2>Design</h2>
@@ -109,6 +111,7 @@
             </div>
         </section>
 
+        <!-- UI DESIGN -->
         <section id="ui">
             <div class="emne__container">
                 <h2>UI Design</h2>
@@ -128,7 +131,7 @@
         </section>
         
 
-        
+        <!-- PROJEKTER -->
         <section id="projekter">
             <div class="emne__container">
                 <h2>Projekter</h2>

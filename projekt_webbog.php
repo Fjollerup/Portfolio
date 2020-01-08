@@ -15,7 +15,7 @@
     <?php include 'nav.html' ?>
 
 <!-- INTRO START -->
-    <div id="cover" class="emne__cover cover__projekt--dt">
+    <div id="cover" class="emne__cover cover__projekt--webbog">
         <section class="intro">
             <header class="intro--left">
                 <h1 class="intro__heading">
@@ -61,7 +61,7 @@
                 </p>
             </div>
         </section>
-
+<!-- WEBBOG -->
         <section class="section" id="webbog">
             <div class="section__item">
                 <header class="section__header">
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </section>
-
+<!-- WEBBOG INDEX -->
         <section class="section" id="webbogindex">
             <div class="section__item">
                 <header class="section__header">

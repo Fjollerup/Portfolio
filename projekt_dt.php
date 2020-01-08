@@ -66,7 +66,7 @@
                 </p>
             </div>
         </section>
-
+<!-- PHASEONE START -->
         <section class="section" id="phaseone">
             <!-- <div class="section__item"> -->
                 <header class="section__header">
@@ -125,7 +125,7 @@
                 </div>
             </div>
         </section>
-
+<!-- PHASETWO START -->
         <section class="section" id="phasetwo">
             <div class="section__item">
                 <header class="section__header">
@@ -175,7 +175,7 @@
                 
             </div>
         </section>
-
+<!-- RESULTAT START -->
         <section class="section" id="resultat">
             <div class="section__item">
                 <header class="section__header">

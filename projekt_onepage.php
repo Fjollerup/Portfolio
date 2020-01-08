@@ -66,7 +66,7 @@
                 </p>
             </div>
         </section>
-
+<!-- RESEARCH START -->
         <section class="section" id="research">
             <div class="section__item">
                 <header class="section__header">
@@ -110,7 +110,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- DTDESIGN START -->
         <section class="section" id="dtdesign">
             <div class="section__item">
                 <header class="section__header">
@@ -140,7 +140,7 @@
                 </div>
             </div>
         </section>
-
+<!-- PRODUKTION START -->
         <section class="section" id="produktion">
             <div class="section__item">
                 <header class="section__header">

@@ -84,7 +84,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- FASER START -->
         <section class="section" id="faser">
             <div class="section__item">
                 <header class="section__header">
@@ -151,7 +151,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- DIVERGENT/KONVERGENT START -->
         <section class="section" id="thinking">
             <div class="section__item">
                 <header class="section__header">

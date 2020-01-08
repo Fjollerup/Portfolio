@@ -79,7 +79,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- UNDERVISNING START -->
         <section class="section" id="undervisning">
             <div class="section__item">
                 <header class="section__header">
@@ -95,7 +95,7 @@
                 </div>
             </div>
         </section>
-
+<!-- SHAPEBUILDER START -->
         <section class="section" id="shapebuilder">
             <div class="section__item">
                 <header class="section__header">
@@ -117,7 +117,7 @@
                 </div>
             </div>
         </section>
-
+<!-- PENTOOL START -->
         <section class="section" id="pentool">
             <div class="section__item">
                 <header class="section__header">

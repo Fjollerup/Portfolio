@@ -38,7 +38,10 @@
                         <a class="list__link" href="projekt_dt.php">Design Thinking Projekt</a>
                     </li>
                     <li class="list__item">
-                        <a class="list__link" href="projekt_onepage.php">Onepage</a>
+                        <a class="list__link" href="projekt_onepage.php">Onepage Projekt</a>
+                    </li>
+                    <li class="list__item">
+                        <a class="list__link" href="refleksioner.php">Portfolio</a>
                     </li>
                 </ul>
             </div>

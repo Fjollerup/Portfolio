@@ -88,7 +88,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- HUMANISTISK START -->
         <section class="section" id="humanistisk">
             <div class="section__item">
                 <header class="section__header">
@@ -123,7 +123,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- IMK START -->
         <section class="section" id="imk">
             <div class="section__item">
                 <header class="section__header">
@@ -142,7 +142,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- THORLACIUS START -->
         <section class="section" id="thorlacius">
             <div class="section__item">
                 <header class="section__header">
@@ -239,7 +239,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- SAMFUNDSFAGLIGE START -->
         <section class="section" id="samfundsfaglig">
             <div class="section__item">
                 <header class="section__header">
@@ -272,7 +272,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- SRSOR START -->
         <section class="section" id="srsor">
             <div class="section__item">
                 <header class="section__header">
@@ -310,7 +310,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- LASSWELL START -->
         <section class="section" id="lasswell">
             <div class="section__item">
                 <header class="section__header">

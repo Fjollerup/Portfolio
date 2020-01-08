@@ -73,7 +73,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- GANGSTER START -->
         <section class="section" id="gangster">
             <div class="section__item">
                 <header class="section__header">

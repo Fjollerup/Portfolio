@@ -42,7 +42,6 @@
 
 <!-- CONTENT START -->
     <section class="emne__content" id="perioder">
-
         <section class="section">
             <div class="section__item">
                 <header class="section__header">
@@ -119,7 +118,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- HISTORIE START -->
         <section class="section" id="historie">
             <div class="section__item">
                 <header class="section__header">

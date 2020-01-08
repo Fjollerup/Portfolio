@@ -84,7 +84,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- FISKEN START -->
         <section class="section" id="fisken">
             <div class="section__item">
                 <header class="section__header">
@@ -117,7 +117,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- RETORIK START -->
         <section class="section" id="retorik">
             <div class="section__item">
                 <header class="section__header">
@@ -198,7 +198,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- PRACTICE START -->
         <section class="section" id="practice">
             <div class="section__item">
                 <header class="section__header">

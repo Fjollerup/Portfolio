@@ -71,7 +71,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- STATIC START -->
         <section class="section" id="static">
             <div class="section__item">
                 <header class="section__header">
@@ -89,7 +89,7 @@
                 </div>
             </div>
         </section>
-
+<!-- FLUID START -->
         <section class="section" id="fluid">
             <div class="section__item">
                 <header class="section__header">
@@ -111,7 +111,7 @@
                 </div>
             </div>
         </section>
-
+<!-- RESPONSIVE START -->
         <section class="section" id="responsive">
             <div class="section__item">
                 <header class="section__header">
@@ -131,7 +131,7 @@
                 </div>
             </div>
         </section>
-
+<!-- ADAPTIVE START -->
         <section class="section" id="adaptive">
             <div class="section__item">
                 <header class="section__header">

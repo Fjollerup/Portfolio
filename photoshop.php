@@ -91,7 +91,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- PEERTOPEER START -->
         <section class="section" id="peertopeer">
             <div class="section__item">
                 <header class="section__header">
@@ -115,7 +115,7 @@
                 </div>
             </div>
         </section>
-
+<!-- ONEPAGE PROJEKT START -->
         <section class="section" id="onepageprojekt">
             <div class="section__item">
                 <header class="section__header">
@@ -143,7 +143,7 @@
                 </p>
             </div>
         </section>
-
+<!-- SELVSTUDIE START -->
         <section class="section" id="selvstudie">
             <div class="section__item">
                 <header class="section__header">

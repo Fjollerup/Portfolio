@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Oswald:200,300,400,500,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro&display=swap');
-
+/* 
+-----------------------------------
+GLOBAL ELEMENTS
+-----------------------------------
+*/
 html { scroll-behavior: smooth; }
 
 body {
@@ -72,14 +76,12 @@ img {
     width: 100%;
 }
 
-.img__perspektiv {
-    max-width: 300px;
-}
-
 /* 
------------------------------------
+---------------------------------------------------------------------------
+
 NAVIGATION
------------------------------------
+
+---------------------------------------------------------------------------
 */
 
 .navbar__header {
@@ -183,8 +185,8 @@ NAVIGATION - OVERLAY
     background: #111;
     opacity: 0;
     transition: 
-    opacity 300ms ease,
-    visibility 300ms ease;
+        opacity 300ms ease,
+        visibility 300ms ease;
     visibility: hidden;
 }
 
@@ -216,10 +218,15 @@ NAVIGATION - OVERLAY
     }
 
     #menu .menu__list.menu__list--small .menu__link {
-        font-size: 16px;
+        font-size: 24px;
         color: #666;
         line-height: 1.6;
         text-transform: none;
+        transition: color 400ms ease;
+    }
+
+    #menu .menu__list.menu__list--small .menu__link:hover {
+        color: #fff;
     }
 
     .navbar--open {
@@ -282,7 +289,7 @@ Justering af størrelse til desktop.
     }
 
     #menu .menu__list.menu__list--small .menu__link {
-        font-size: 20px;
+        font-size: 30px;
      
     }
 }
@@ -290,7 +297,7 @@ Justering af størrelse til desktop.
 /* 
 -----------------------------------
 NAVIGATION - MENU
-- Den animerede del.
+- ANIMATIONER
 -----------------------------------
 */
 
@@ -390,6 +397,7 @@ FOOTER SECTION
     padding: 2rem 0;
     line-height: 2.5;
     margin: 3rem 0 0 0;
+    text-transform: uppercase;
 }
 
     .footer h3 {
@@ -421,6 +429,15 @@ FOOTER SECTION
         display: block;
     }
 
+    footer .footer__link {
+        color: #fff;
+        transition: color 400ms ease;
+    }
+
+    footer .footer__link:hover {
+        color: #ef0d33;
+    }
+
 @media screen and (min-width: 768px) {
     footer h3 {
         font-size: 3rem;
@@ -440,10 +457,12 @@ FOOTER SECTION
 }
 
 /* 
------------------------------------
+---------------------------------------------------------------------------
+
 FORSIDE
 - Intro section
------------------------------------
+
+---------------------------------------------------------------------------
 */
 
 #cover {
@@ -700,8 +719,19 @@ FORSIDE
 
     #projekter::after {
         content: '';
-            background-image: url('../img/projekt.png');
-            opacity: .5;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-image: url('../img/projekt.png');
+        background-repeat: no-repeat;
+        background-position-x: 50%;
+        background-position-y: 50%;
+        background-size: cover;
+        opacity: .3;
+        z-index: -1;
     }
 
 /* 
@@ -779,10 +809,6 @@ Cover sektion: Emne-sider
         opacity: .05;
         z-index: -1;
     }
-
-    /* .cover__html .intro {
-        margin: 50px 0 0 0;
-    } */
 
 #cover.cover__css {
     position: relative;
@@ -1039,6 +1065,14 @@ COVER SEKTIONER
     .emne__cover.cover__projekt__webbog .intro--left {
         max-width: 19rem;
     }
+
+    .emne__cover.cover__refleksioner .intro--left {
+        max-width: 20rem;
+    }
+
+    .emne__cover.cover__ophavsret .intro--left {
+        max-width: 16.2rem;
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -1170,6 +1204,14 @@ COVER SEKTIONER
     .emne__cover.cover__projekt__webbog .intro--left {
         max-width: 22.8rem;
     }
+
+    .emne__cover.cover__refleksioner .intro--left {
+        max-width: 21.6rem;
+    }
+
+    .emne__cover.cover__ophavsret .intro--left {
+        max-width: 23.1rem;
+    }
 }
 
 
@@ -1238,6 +1280,14 @@ pre.linenumbers > code {
 #syntaks {
     position: relative;
 }
+
+/* 
+---------------------------------------------------------------------------
+
+EMNE SIDER
+
+---------------------------------------------------------------------------
+*/
 
 /* 
 -----------------------------------

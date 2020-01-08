@@ -66,7 +66,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- SYNTAKS START -->
         <section class="section" id="syntaks">
             <div class="section__item">
                 <header class="section__header">
@@ -119,7 +119,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- SEO START -->
         <section class="section" id="seo">
             <div class="section__item">
                 <header class="section__header">
@@ -136,7 +136,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- KODESKIK START -->
         <section class="section" id="kodeskik">
             <div class="section__item">
                 <header class="section__header">

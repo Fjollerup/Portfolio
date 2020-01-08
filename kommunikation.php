@@ -43,6 +43,9 @@
                     <li class="list__item">
                         <a class="list__link" href="bmc.php">Business Canvas Model (BMC)</a>
                     </li>
+                    <li class="list__item">
+                        <a class="list__link" href="ophavsret.php">Ophavsret</a>
+                    </li>
                 </ul>
             </div>
         </section>

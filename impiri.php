@@ -52,7 +52,6 @@
 
 <!-- CONTENT START -->
     <section class="emne__content" id="kvantitativ">
-
         <section class="section">
             <div class="section__item">
                 <header class="section__header">
@@ -104,7 +103,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- KVALITATIV START -->
         <section class="section" id="kvalitativ">
             <div class="section__item">
                 <header class="section__header">
@@ -147,14 +146,12 @@
                     og til tider får man også nogle nye erkendelser om enten emne eller interviewede.
                 </p>
                 <h4>Eksempel</h4>
-                <s class="section__text">
+                <p class="section__text">
                     Her går man som sagt i dybden. Hvis man f.eks. skulle interview
                     Robert Downey Jr. Omkring hans rolle som ”Tony Stark / Iron Man”
                     både iron man og avengers filmene.
-                </s>
-                <s class="section__text">
                     Man ville spørge ind til hans handlinger, og ikke så meget hans holdninger.
-                </s>
+                </p>
                 <ul class="section__list">
                     <li class="list__item">Alle ved du improviserede i denne scene, hvorfor valgte du at gøre sådan?</li>
                     <li class="list__item">I dag har vi CGI og green screen, har du prøvet at have en real-size suit på?</li>
@@ -180,7 +177,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- KOMBINATION START -->
         <section class="section" id="kombination">
             <div class="section__item">
                 <header class="section__header">
@@ -201,7 +198,7 @@
                 </p>
             </div>
         </section>
-
+<!-- TRANSKRIBERE START -->
         <section class="section" id="transkribere">
             <div class="section__item">
                 <header class="section__header">
@@ -235,7 +232,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- MENING START -->
         <section class="section" id="mening">
             <div class="section__item">
                 <header class="section__header">

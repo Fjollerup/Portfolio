@@ -84,7 +84,7 @@
                 </ul>
                 </div>
         </section>
-
+<!-- CLIENT START -->
         <section class="section" id="client">
             <div class="section__item">
                 <header class="section__header">
@@ -105,7 +105,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- MMD START -->
         <section class="section" id="mmd">
             <div class="section__item">
                 <header class="section__header">
@@ -135,7 +135,7 @@
                 </p>
             </div>
         </section>
-
+<!-- SCRIPTING START -->
         <section class="section" id="scripting">
             <div class="section__item">
                 <header class="section__header">

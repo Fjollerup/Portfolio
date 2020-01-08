@@ -80,7 +80,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- CONTENTISKING START -->
         <section class="section" id="contentisking">
             <div class="section__item">
                 <header class="section__header">
@@ -101,7 +101,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- KRITERIER START -->
         <section class="section" id="kriterier">
             <div class="section__item">
                 <header class="section__header">
@@ -140,7 +140,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- ARTIKLEN START -->
         <section class="section" id="artiklen">
             <div class="section__item">
                 <header class="section__header">
@@ -163,7 +163,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- TEKSTWEB START -->
         <section class="section" id="tekstweb">
             <div class="section__item">
                 <header class="section__header">
@@ -196,7 +196,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- TEKSTSOCIALE START -->
         <section class="section" id="tekstsociale">
             <div class="section__item">
                 <header class="section__header">

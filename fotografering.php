@@ -75,7 +75,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- LUKKER START -->
         <section class="section" id="lukker">
             <div class="section__item">
                 <header class="section__header">
@@ -104,7 +104,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- APERTURE START -->
         <section class="section" id="aperture">
             <div class="section__item">
                 <header class="section__header">
@@ -132,7 +132,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- ISO START -->
         <section class="section" id="iso">
             <div class="section__item">
                 <header class="section__header">
@@ -160,7 +160,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- INDSTILLINGER START -->
         <section class="section" id="indstillinger">
             <div class="section__item">
                 <header class="section__header">
@@ -182,7 +182,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- ERFARINGER START -->
         <section class="section" id="erfaringer">
             <div class="section__item">
                 <header class="section__header">

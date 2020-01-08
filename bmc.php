@@ -88,7 +88,7 @@
                 </p>
             </div>
         </section>
-
+<!-- SEGMENTER -->
         <section class="section" id="segmenter">
             <div class="section__item">
                 <header class="section__header">
@@ -109,7 +109,7 @@
                 </p>
             </div>
         </section>
-
+<!-- TILBUD -->
         <section class="section" id="tilbud">
             <div class="section__item">
                 <header class="section__header">
@@ -128,7 +128,7 @@
                 </p>
             </div>
         </section>
-
+<!-- KANALER -->
         <section class="section" id="kanaler">
             <div class="section__item">
                 <header class="section__header">
@@ -147,7 +147,7 @@
                 </p>
             </div>
         </section>
-
+<!-- RELATIONER -->
         <section class="section" id="relationer">
             <div class="section__item">
                 <header class="section__header">
@@ -165,7 +165,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- INDTÆGTSTRØMME -->
         <section class="section" id="income">
             <div class="section__item">
                 <header class="section__header">
@@ -185,7 +185,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- RESOURCER -->
         <section class="section" id="ressourcer">
             <div class="section__item">
                 <header class="section__header">
@@ -208,7 +208,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- AKTIVITERTER -->
         <section class="section" id="aktiviteter">
             <div class="section__item">
                 <header class="section__header">
@@ -230,7 +230,7 @@
                 </p>
             </div>
         </section>
-
+<!-- PARTNERE -->
         <section class="section" id="partnere">
             <div class="section__item">
                 <header class="section__header">
@@ -253,7 +253,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- OMKOSTNINGER -->
         <section class="section" id="omkostninger">
             <div class="section__item">
                 <header class="section__header">

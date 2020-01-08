@@ -62,7 +62,7 @@
                 </p>
                 </div>
         </section>
-
+<!-- GIT START -->
         <section class="section" id="git">
             <div class="section__item">
                 <header class="section__header">
@@ -75,7 +75,7 @@
                 </p>
             </div>
         </section>
-
+<!-- GITHUB START -->
         <section class="section" id="github">
             <div class="section__item">
                 <header class="section__header">
@@ -108,7 +108,7 @@
                 </ul>
             </div>
         </section>
-
+<!-- REPOS START -->
         <section class="section" id="repos">
             <div class="section__item">
                 <header class="section__header">
